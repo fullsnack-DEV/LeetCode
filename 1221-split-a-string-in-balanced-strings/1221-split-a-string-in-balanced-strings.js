@@ -3,26 +3,26 @@
  * @return {number}
  */
 var balancedStringSplit = function(s) {
-  
-     let counterR = 0; 
-    let counterL = 0; 
-    let resultCounter = 0; 
     
-    for (let i = 0; i < s.length; i ++) {
+    let count = 0; 
+    let total = 0; 
+    
+    for(let i = 0; i < s.length; i ++)  {
         
-        if(s[i]== "R") {
-            counterR++
-        }else {
-            counterL++
+        if(s[i] === "R") {
+            count++
+        } else {
+            
+            count--
+            
         }
         
-        if(counterR == counterL) {
-            resultCounter ++
+        if(count == 0) {
+            total++
         }
-        
     }
     
-    return resultCounter;
+    return total;
     
     
 };
